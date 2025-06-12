@@ -1,0 +1,76 @@
+<!-- privacy.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+  <div class="logo">
+    <img src="images/logo.png" alt="NovaTech Logo" /> NovaTech
+  </div>
+
+  <!-- Hamburger for Mobile -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <ul class="navbar" id="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Features</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">AI Tools</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Automation</a></li>
+          <li><a href="#">Cloud Integration</a></li>
+          <li><a href="features.html">Know More</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Consulting</a></li>
+          <li><a href="#">Development</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="services.html">Explore Services</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+  <section class="features">
+    <h2>Privacy Policy</h2>
+    <p>This is the privacy policy page. We value your privacy and protect your data.</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 NovaTech</p>
+  </footer>
+    <script>
+  // Navbar toggle for mobile
+  const toggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  toggle.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+  });
+
+  // Dropdown toggle (mobile)
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dropdownMenu = toggle.nextElementSibling;
+      dropdownMenu.classList.toggle('show');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaTech | Features</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="logo">
+    <img src="images/logo.png" alt="NovaTech Logo" /> NovaTech
+  </div>
+
+  <!-- Hamburger for Mobile -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <ul class="navbar" id="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Features</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">AI Tools</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Automation</a></li>
+          <li><a href="#">Cloud Integration</a></li>
+          <li><a href="features.html">Know More</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Consulting</a></li>
+          <li><a href="#">Development</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="services.html">Explore Services</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section class="features">
+    <h2>Explore Our Features</h2>
+    <div class="feature-list">
+      <div class="feature" id="ai-tools">
+        <h3>AI Tools</h3>
+        <p>Utilize cutting-edge artificial intelligence to optimize tasks, predict trends, and drive growth.</p>
+      </div>
+      <div class="feature" id="analytics">
+        <h3>Advanced Analytics</h3>
+        <p>Visualize your business insights with real-time dashboards and reports.</p>
+      </div>
+      <div class="feature" id="automation">
+        <h3>Smart Automation</h3>
+        <p>Streamline workflows with intelligent process automation to save time and costs.</p>
+      </div>
+      <div class="feature" id="integration">
+        <h3>Cloud Integration</h3>
+        <p>Access your data and tools securely from anywhere with seamless cloud services.</p>
+      </div>
+      <div class="feature" id="collaboration">
+        <h3>Team Collaboration</h3>
+        <p>Enable efficient communication and project tracking across your teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NovaTech</p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+  </footer>
+    <script>
+  // Navbar toggle for mobile
+  const toggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  toggle.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+  });
+
+  // Dropdown toggle (mobile)
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dropdownMenu = toggle.nextElementSibling;
+      dropdownMenu.classList.toggle('show');
+    });
+  });
+</script>
+</body>
+</html>
